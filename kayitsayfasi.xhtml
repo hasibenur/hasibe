@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <h:outputStylesheet library="css" name="bootstrap.css"/>
+        <h:outputScript library="css" name="bootstrap.js"/>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"></link>
+
+        <title>     </title>
+    </h:head>
+    <h:body>
+        <h1>      </h1>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+        -->
+
+        <nav class="navbar sticky-top-right navbar-expand-lg navbar-dark  " style="background-color: peru " >
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.xhtml">Anasayfa</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="blogyazilari.xhtml">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="iletisimsayfasi.xhtml">İletişim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="girissayfasi.xhtml">Giriş yap</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="dropdown.xhtml#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="dropdown.xhtml#xbeslenme">Beslenme</a></li>
+                                <li><a class="dropdown-item" href="dropdown.xhtml#xspor">Spor</a></li>
+                                <li><hr class="dropdown-divider"></hr></li>
+                                <li><a class="dropdown-item" href="dropdown.xhtml#xpsikoloji">Psikoloji</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+        <h:form class="row g-3">
+            <div class="col-md-6">
+                <h:outputLabel for="kisim" class="form-label" value="İsim"/>
+                <h:inputText class="form-control" id="kisim" value="#{inputuser.kisim}"/>
+                
+            </div>
+            <div class="col-md-6">
+                <h:outputLabel for="ksoyisim" class="form-label" value="Soyisim"/>
+                <h:inputText class="form-control" id="ksoyisim" value="#{inputuser.ksoyisim}"/>
+                
+            </div>
+            <div class="col-md-6">
+                <h:outputLabel for="kmail" class="form-label" value="E-mail"/>
+                <h:inputText class="form-control" id="kmail" value="#{inputuser.kmail}"/>
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Lütfen geçerli bir mail adresi girin.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h:outputLabel for="ksifre" class="form-label" value="Şifre"/>
+                <h:inputText class="form-control" id="ksifre" value="#{inputuser.ksifre}"/>
+            </div>
+            <div class="col-12">
+                <h:outputLabel for="kadres" class="form-label" value="Adres"/>
+                <h:inputTextarea class="form-control" id="kadres" value="#{inputuser.kadres}"/>
+            </div>
+            <h:outputLabel for="ksehir" class="form-label" value="Şehir"/>
+            <h:inputText class="form-control" id="ksehir" value="#{inputuser.ksehir}"/>
+            <div id="validationServer03Feedback" class="invalid-feedback">
+                Lütfen geçerli bir şehir ismi girin.
+            </div>
+            
+            
+            <div class="col-md-2">
+                <h:outputLabel for="kzip" class="form-label" value="Zip Kodu"/>
+                <h:inputText class="form-control" id="kzip" value="#{inputuser.kzip}"/>
+                <div id="validationServer05Feedback" class="invalid-feedback">
+                    Lütfen geçerli bir kod girin.
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h:outputLabel for="kkullaniciadi" class="form-label" value="Kullanıcı Adı"/>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <h:inputText class="form-control" id="kkullaniciadi"  required="true" value="#{inputuser.kkullaniciadi}"/>
+                    <div class="invalid-feedback">
+                        Lütfen bir kullanıcı adı giriniz.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required="true"></input>
+                    <label class="form-check-label" for="invalidCheck">
+                        Şartları okudum ve kabul ediyorum.
+                    </label>
+                    <div class="invalid-feedback">
+                        Kaydolmadan önce şartları kabul etmeniz gerekmektedir.
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h:commandButton type="submit" class="btn btn-primary" value="Kaydol" action="#{inputuser.kayitOldu()}"/>
+            </div>
+        </h:form>
+
+
+    </h:body>
+</html>
